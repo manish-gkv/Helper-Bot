@@ -1,3 +1,4 @@
+const app = require('express')();
 const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config();
 const fs = require('fs');
@@ -177,4 +178,6 @@ bot.on('callback_query', (callbackQuery) => {
     }
 });
 
-console.log('Bot is running...');
+app.listen(3000, ()=>{
+    console.log('Bot is running...');
+});

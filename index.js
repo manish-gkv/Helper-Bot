@@ -178,6 +178,9 @@ bot.on('callback_query', (callbackQuery) => {
     }
 });
 
+app.get('/', (req, res)=>{
+    res.send('Bot is running');
+})
 app.listen(3000, ()=>{
     console.log('Bot is running...');
 });
